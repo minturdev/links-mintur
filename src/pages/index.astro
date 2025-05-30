@@ -1,0 +1,53 @@
+---
+import Header from "../components/Header.astro";
+import Link from "../components/Link.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Ministerio de Turismo de Formosa"
+  description="Sitio web de redes sociales y folletería del Ministerio de Turismo de Formosa"
+>
+  <div
+    class="w-max h-min mx-auto p-4 pb-6 mt-16 z-0 bg-primary-light/30 backdrop-blur-[.5px] border-1 border-gray-200 rounded-lg shadow-2xs"
+  >
+    <Header />
+    <section class="flex flex-col items-center gap-2">
+      <Link
+        href="https://www.facebook.com/minturformosa"
+        title="@minturformosaoficial"
+        icon="facebook"
+      />
+      <Link
+        href="https://www.instagram.com/minturformosa"
+        title="@minturformosa"
+        icon="instagram"
+      />
+      <Link
+        href="https://www.tiktok.com/@formosahermosaoficial"
+        title="@formosahermosaoficial"
+        icon="tiktok"
+      />
+      <Link
+        href="https://wa.me/5493705155083"
+        title="(+54) 3705155013"
+        icon="whatsapp"
+      />
+      <Link
+        href="https://www.formosahermosa.gob.ar/"
+        title="www.formosahermosa.gob.ar"
+        icon="website"
+      />
+      <Link
+        href="mailto:socialmintur@formosa.gob.ar"
+        title="socialmintur@formosa.gob.ar"
+        icon="email"
+      />
+      <Link
+        href="https://www.formosahermosa.gob.ar/folleteria/"
+        title="Descargar folletería"
+        icon="folleteria"
+      />
+    </section>
+  </div>
+</BaseLayout>

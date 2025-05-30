@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import perfil from "../assets/images/perfil-mintur.jpeg";
+---
+
+<header
+  class="flex flex-col gap-2 mb-8 items-center justify-center bg-transparent text-center
+  "
+>
+  <a
+    class="flex flex-col items-center justify-center relative z-10 -mt-16"
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.instagram.com/minturformosa"
+  >
+    <Image
+      class="aspect-auto w-26 rounded-full border-1 border-gray-200 shadow-2xs hover:scale-105 transition duration-300 ease-in-out"
+      src={perfil}
+      alt="Mintur Formosa"
+    />
+    <h1 class="text-xl text-wrap font-bold mt-2 mb-2 
+      text-white">
+      Ministerio de Turismo de Formosa
+    </h1>
+    <span
+      class="text-[16px] flex items-center justify-center text-gray-200 py-1.5 px-2 border-1
+        border-gray-200 bg-primary rounded-full mt-2 mb-2
+        hover:bg-primary-dark/90 transition duration-300 ease-in-out shadow-2xs"
+    >
+      @minturformosa
+    </span>
+  </a>
+</header>

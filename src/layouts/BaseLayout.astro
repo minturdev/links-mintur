@@ -1,0 +1,38 @@
+---
+const { title, description } = Astro.props;
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ministerio de Turismo de Formosa" />
+    <meta
+      property="og:description"
+      content="Enlaces a las redes sociales y folletería del Ministerio"
+    />
+    <meta property="og:image" content="./src/img/preview-page.jpg" />
+    <meta property="og:url" content="https://link-mintur.netlify.app/" />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/images/estrellita-blanco.png"
+    />
+  </head>
+  <body>
+    <section
+      class="bg-[url('/src/assets/images/fondo-2.webp')] bg-cover bg-no-repeat h-max py-8 pb-20"
+    >
+      <slot />
+    </section>
+  </body>
+</html>
