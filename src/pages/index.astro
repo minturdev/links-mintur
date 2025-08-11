@@ -1,7 +1,48 @@
 ---
 import Header from "../components/Header.astro";
 import Link from "../components/Link.astro";
+import LinkImage from "../components/LinkImage.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const links = [
+  {
+    href: "https://www.instagram.com/minturformosa",
+    title: "@minturformosa",
+    icon: "instagram",
+  },
+  {
+    href: "https://www.facebook.com/minturformosaoficial",
+    title: "@minturformosaoficial",
+    icon: "facebook",
+  },
+  {
+    href: "https://www.tiktok.com/@formosahermosaoficial",
+    title: "@formosahermosaoficial",
+    icon: "tiktok",
+  },
+  {
+    href: "https://wa.me/5493705155083",
+    title: "(+54) 3705155083",
+    icon: "whatsapp",
+  },
+  {
+    href: "https://www.formosahermosa.gob.ar/",
+    title: "www.formosahermosa.gob.ar",
+    icon: "website",
+  },
+  {
+    href: "mailto:socialmintur@formosa.gob.ar",
+    title: "socialmintur@formosa.gob.ar",
+    icon: "email",
+  },
+  {
+    href: "https://www.formosahermosa.gob.ar/folleteria/",
+    title: "Descargar Folletería",
+    icon: "folleteria",
+  },
+]
+
+import logoPomelo from "../assets/images/logo-pomelo.png";
 ---
 
 <BaseLayout
@@ -13,41 +54,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   >
     <Header />
     <section class="flex flex-col items-center gap-2">
-      <Link
-        href="https://www.facebook.com/minturformosaoficial"
-        title="@minturformosaoficial"
-        icon="facebook"
-      />
-      <Link
-        href="https://www.instagram.com/minturformosa"
-        title="@minturformosa"
-        icon="instagram"
-      />
-      <Link
-        href="https://www.tiktok.com/@formosahermosaoficial"
-        title="@formosahermosaoficial"
-        icon="tiktok"
-      />
-      <Link
-        href="https://wa.me/5493705155083"
-        title="(+54) 3705155013"
-        icon="whatsapp"
-      />
-      <Link
-        href="https://www.formosahermosa.gob.ar/"
-        title="www.formosahermosa.gob.ar"
-        icon="website"
-      />
-      <Link
-        href="mailto:socialmintur@formosa.gob.ar"
-        title="socialmintur@formosa.gob.ar"
-        icon="email"
-      />
-      <Link
-        href="https://www.formosahermosa.gob.ar/folleteria/"
-        title="Descargar folletería"
-        icon="folleteria"
-      />
+      <!-- <LinkImage 
+        href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MjcxMDY4NDg3MjE2OTAz?story_media_id=3477264326836490368_4334092886"
+        title="Fiesta Nacional del Pomelo XLI" 
+        image={logoPomelo.src} /> -->
+      {
+        links.map((link) => (
+          <Link
+            href={link.href}
+            title={link.title}
+            icon={link.icon}
+          />
+        ))
+      }
     </section>
   </div>
 </BaseLayout>

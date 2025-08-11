@@ -13,6 +13,14 @@
     --color-primary-dark: #0f3c6b;
     --color-primary-light: #1a6db0;
 
+    --color-secondary: #d4d4d4;
+    --color-secondary-dark: #b3b3b3;
+    --color-secondary-light: #f2f2f2;
+
+    --color-pomelo: #008231;
+    --color-pomelo-dark: #006b1b;
+    --color-pomelo-light: #00a63d;
+
     /* Fuentes */
    --font-display: 'Inter', system-ui, sans-serif;
 }
