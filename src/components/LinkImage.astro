@@ -1,16 +1,19 @@
 ---
 const { href, title, image } = Astro.props;
-
-
+import { Image } from "astro:assets";
 ---
 
 <a
   href={href}
   target="_blank"
   rel="noopener noreferrer"
-  class="w-xs flex items-center gap-2 text-pomelo px-4 py-3 border-1 border-pomelo  bg-neutral-100 backdrop-blur-sm font-bold
+  class="w-xs flex items-center gap-2 text-pomelo px-4 py-3 border-1 border-pomelo bg-neutral-100 backdrop-blur-sm font-bold
    rounded-lg shadow-2xs hover:text-pomelo-dark hover:bg-neutral-200 hover:border-pomelo-dark hover:scale-105 transition duration-300 ease-in-out"
 >
-  <img class="w-8 h-8 rounded-full border-1 border-pomelo" src={image} alt={title}>
+  <img
+    class="w-8 h-8 p-1 rounded-full border-1 border-pomelo"
+    src={image}
+    alt={title}
+  />
   <span>{title}</span>
 </a>
