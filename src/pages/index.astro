@@ -40,6 +40,11 @@ const links = [
     title: "Descargar Folletería",
     icon: "folleteria",
   },
+  {
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSeV1BIjibDco3AOZvliibw-nHte5aoshShPjJgF9XYUFD7XqQ/viewform?usp=header",
+    title: "Encuesta de Experiencia",
+    icon: "encuesta",
+  },
 ]
 
 import logoPomelo from "../assets/images/logo-pomelo.png";
@@ -51,7 +56,7 @@ import verano from "../assets/images/icon-verano.png";
   description="Sitio web de redes sociales y folletería del Ministerio de Turismo de Formosa"
 >
   <div
-    class="w-max h-min mx-auto p-4 pb-6 mt-16 z-0 bg-primary-light/30 backdrop-blur-[.5px] border-1 border-gray-200 rounded-lg shadow-2xs"
+    class="w-max h-min mx-auto p-4 mt-16 z-0 bg-primary-light/30 backdrop-blur-[.5px] border-1 border-gray-200 rounded-lg shadow-2xs"
   >
     <Header />
     <section class="flex flex-col items-center gap-2">
@@ -71,7 +76,7 @@ import verano from "../assets/images/icon-verano.png";
       <LinkImage 
         href="https://www.formosahermosa.gob.ar/verano/"
         title="Temporada Verano 2025 / 2026" 
-        image={verano.src} />
+        image={verano.src} />      
     </section>
   </div>
 </BaseLayout>
