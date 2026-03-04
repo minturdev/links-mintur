@@ -48,6 +48,7 @@ const links = [
 ]
 
 import logoPomelo from "../assets/images/logo-pomelo.png";
+import logoCorvina from "../assets/images/logo-corvina-2026.png";
 import verano from "../assets/images/icon-verano.png";
 ---
 
@@ -56,14 +57,17 @@ import verano from "../assets/images/icon-verano.png";
   description="Sitio web de redes sociales y folletería del Ministerio de Turismo de Formosa"
 >
   <div
-    class="w-max h-min mx-auto p-4 mt-16 z-0 bg-primary-light/30 backdrop-blur-[.5px] border-1 border-gray-200 rounded-lg shadow-2xs"
+    class="w-max h-min mx-auto p-4 px-2 mt-16 z-0 bg-primary-light/30
+     backdrop-blur-[.5px] border-1 border-gray-200 rounded-lg shadow-2xs"
   >
     <Header />
     <section class="flex flex-col items-center gap-2">
-      <!-- <LinkImage 
-        href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDUzNDg1MjI5NTczNTUw?story_media_id=3703634748332510449_4334092886"
-        title="Fiesta Nacional del Pomelo XLI" 
-        image={logoPomelo.src} /> -->
+      <LinkImage 
+        href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4NDExMjY5NzM3MTIzMjEx?story_media_id=3830259837296472747_4334092886&igsh=MXQ4dzJqb2oybnNncw=="
+        title="Fiesta Nacional de la Corvina de Río" 
+        type="secondary"
+        customStyles="w-max"
+        image={logoCorvina.src} />
       {
         links.map((link) => (
           <Link
