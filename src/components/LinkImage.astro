@@ -1,17 +1,29 @@
 ---
-const { href, title, image } = Astro.props;
+const { href, title, image, type="primary", customStyles } = Astro.props;
 import { Image } from "astro:assets";
+
+let stylesType = "";
+let stylesImage = "";
+
+if(type === "primary"){
+  stylesType = "text-pomelo border-pomelo hover:text-pomelo-dark hover:border-pomelo-dark";
+  stylesImage = "border-pomelo";
+} else if(type === "secondary"){
+  stylesType = "text-primary border-primary hover:text-primary-dark hover:border-primary-dark";
+  stylesImage = "border-primary";
+}
+
 ---
 
 <a
   href={href}
   target="_blank"
   rel="noopener noreferrer"
-  class="w-xs flex items-center gap-2 text-pomelo px-4 py-3 border-1 border-pomelo bg-neutral-100 backdrop-blur-sm font-bold
-   rounded-lg shadow-2xs hover:text-pomelo-dark hover:bg-neutral-200 hover:border-pomelo-dark hover:scale-105 transition duration-300 ease-in-out"
+  class={ `${customStyles} max-w-max min-w-xs flex items-center gap-2 px-4 py-3 border-1 bg-neutral-100 backdrop-blur-sm font-bold
+   rounded-lg shadow-2xs  hover:bg-neutral-200  hover:scale-105 transition duration-300 ease-in-out ${stylesType} ` }
 >
   <img
-    class="w-8 h-8 p-1 rounded-full border-1 border-pomelo"
+    class={`w-8 h-8 p-1 rounded-full border-1 ${stylesImage}`}
     src={image}
     alt={title}
   />
