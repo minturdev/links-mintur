@@ -54,19 +54,18 @@ import verano from "../assets/images/icon-verano.png";
 
 <BaseLayout
   title="Ministerio de Turismo de Formosa"
-  description="Sitio Web de redes sociales y folletería del Ministerio de Turismo de Formosa"
->
+  description="Sitio Web de redes sociales y folletería del Ministerio de Turismo de Formosa" >
   <div
     class="w-max h-min mx-auto p-4 px-2 mt-16 z-0 bg-primary-light/30
      backdrop-blur-[.5px] border-1 border-gray-200 rounded-lg shadow-2xs">
     <Header />
     <section class="flex flex-col items-center gap-2">
-      <LinkImage 
+      <!-- <LinkImage 
         href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4NDExMjY5NzM3MTIzMjEx?story_media_id=3830259837296472747_4334092886&igsh=MXQ4dzJqb2oybnNncw=="
         title="Fiesta Nacional de la Corvina de Río" 
         type="secondary"
         customStyles="w-max"
-        image={logoCorvina.src} />
+        image={logoCorvina.src} /> -->
       {
         links.map((link) => (
           <Link
@@ -76,10 +75,10 @@ import verano from "../assets/images/icon-verano.png";
           />
         ))
       }
-      <LinkImage 
+      <!-- <LinkImage 
         href="https://www.formosahermosa.gob.ar/verano/"
         title="Temporada Verano 2025 / 2026" 
-        image={verano.src} />      
+        image={verano.src} />       -->
     </section>
   </div>
 </BaseLayout>
